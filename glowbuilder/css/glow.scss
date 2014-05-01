@@ -1,0 +1,63 @@
+//$grid-color: #E95A5A;
+//$led-off: #755151;
+//$led-on: #FF0000;
+
+$button-bg-color: #666;
+$button-color: #fefefe;
+$grid-color: #fefefe;
+$led-off: #ccc;
+$led-on: #c00;
+
+.preview {
+
+}
+
+button {
+  margin: 1em;
+  padding: 1em;
+  border-radius: 10em;
+  border: 0;
+  color: $button-color;
+  background-color: $button-bg-color;
+  text-transform: uppercase;
+  font-weight: 500;
+  &.running.on {
+    transition: all 200ms ease-in ease-out;
+    background-color: $led-on;
+  }
+}
+
+.editor {
+}
+
+.grid {
+  div {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+  background-color: $grid-color;
+  .row {
+    display: block;
+    .cell {
+      border: 1px solid rgba(0, 0, 0, 0.13);
+      padding: 1px;
+      .led {
+        height: 1em;
+        width: 1em;
+        margin: 1px 2px 0 1px;
+        border-radius: 1em;
+        background-color: $led-off;
+        &.on {
+          background-color: $led-on;
+        }
+      }
+    }
+  }
+}
+
+.code {
+  height: 11em;
+  width: 100%;
+}
